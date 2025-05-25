@@ -17,7 +17,29 @@ An **Operating System (OS)** is system software that acts as an interface betwee
 - **User Interface**: Provides CLI or GUI for users to interact with the system.
 
 ---
-
+OS-Concepts-Showcase/
+│
+├── SchedulingAlgorithms/
+│   ├── fcfs.c
+│   ├── sjf.c
+│   ├── round_robin.c
+│   └── README.md
+│
+├── MemoryManagement/
+│   ├── paging_simulator.py
+│   ├── page_replacement_lru.py
+│   └── README.md
+│
+├── Deadlock/
+│   ├── deadlock_detection.c
+│   └── README.md
+│
+├── Shell/
+│   ├── simple_shell.c
+│   └── README.md
+│
+└── README.md
+---
 ##  How to Run
 
 1. Install [Dev-C++](https://sourceforge.net/projects/orwelldevcpp/) or any C++ compiler.
