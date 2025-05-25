@@ -17,28 +17,23 @@ An **Operating System (OS)** is system software that acts as an interface betwee
 - **User Interface**: Provides CLI or GUI for users to interact with the system.
 
 ---
-OS-Concepts-Showcase/
-│
-├── SchedulingAlgorithms/
-│   ├── fcfs.c
-│   ├── sjf.c
-│   ├── round_robin.c
-│   └── README.md
-│
-├── MemoryManagement/
-│   ├── paging_simulator.py
-│   ├── page_replacement_lru.py
-│   └── README.md
-│
-├── Deadlock/
-│   ├── deadlock_detection.c
-│   └── README.md
-│
-├── Shell/
-│   ├── simple_shell.c
-│   └── README.md
-│
-└── README.md
+## **OS-Concepts-Showcase**
+
+- 1.SchedulingAlgorithms/
+-  fcfs.cpp
+-  sjf.cpp
+-  round_robin.cpp
+-  README.md
+
+- 2.MemoryManagement/
+  - paging_simulator.py
+  - page_replacement_lru.py
+  - README.md
+-  3.Deadlock/
+ - deadlock_detection.cpp
+ -  README.md
+
+
 ---
 ##  How to Run
 
