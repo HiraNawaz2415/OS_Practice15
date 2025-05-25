@@ -28,7 +28,7 @@
 | Independent        | Each process has its own memory and resources                      |
 
 ---
-#🚶‍♂️ **Process Lifecycle (States)**
+# 🚶‍♂️ **Process Lifecycle (States)**
 
 - A process life cycle describes the various stages a process goes through from creation to termination.
 
