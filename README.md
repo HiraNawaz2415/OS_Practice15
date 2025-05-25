@@ -20,18 +20,18 @@ An **Operating System (OS)** is system software that acts as an interface betwee
 ## **OS-Concepts-Showcase**
 
 - 1.SchedulingAlgorithms/
--  fcfs.cpp
--  sjf.cpp
--  round_robin.cpp
--  README.md
+    -  fcfs.cpp
+    -  sjf.cpp
+    -  round_robin.cpp
+    -  README.md
 
 - 2.MemoryManagement/
   - paging_simulator.py
   - page_replacement_lru.py
   - README.md
 -  3.Deadlock/
- - deadlock_detection.cpp
- -  README.md
+    - deadlock_detection.cpp
+    -  README.md
 
 
 ---
