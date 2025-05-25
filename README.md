@@ -1,4 +1,4 @@
-# 🖥️ Operating Systems (OS) Concepts and Scheduling Algorithms
+# 🖥️ Operating Systems (OS) Concepts 
 
 This repository demonstrates key concepts of **Operating Systems (OS)**, focusing on **CPU scheduling algorithms** implemented in C/C++. It's designed to help students and learners understand how modern OSes manage resources efficiently.
 
