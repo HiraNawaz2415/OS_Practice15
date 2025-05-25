@@ -57,7 +57,7 @@ An **Operating System (OS)** is system software that acts as an interface betwee
 **Hira Nawaz (2415)**  
 Graduated BSCS last year 
 Email: nawazhira48@gmail.com  
-GitHub: [HiraNawaz15](https://github.com/yourusername)
+GitHub: [HiraNawaz2415](https://github.com/yourusername)
 
 ---
 
