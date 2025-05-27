@@ -36,7 +36,7 @@
 
 - The new page is loaded in.
 
-  | Term                 | Meaning                                                                           |
+  | Term                 | Meaning                                                                           
 | -------------------- | --------------------------------------------------------------------------------- |
 | **Page**             | A fixed-size block of memory/data used in virtual memory.                         |
 | **Frame**            | A slot in physical memory (RAM) where a page can be loaded.                       |
