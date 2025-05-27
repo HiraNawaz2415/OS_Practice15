@@ -41,11 +41,13 @@ Here are the main states in the process life cycle:
 -  The process is being created.
 
 - OS sets up resources like memory, process ID, etc.
+- Process is remain in secondary memory.
 
 ## **2. Ready**
 - The process is ready to run and waiting for the CPU.
 
 - It's in the ready queue, waiting for its turn.
+- Long term sheduler brought the process from secondary memory to main memory (RAM) or in ready queue.
 
 ## **3. Running**
 - The process is currently using the CPU and executing instructions.
