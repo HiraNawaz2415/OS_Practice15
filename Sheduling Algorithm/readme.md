@@ -1,4 +1,4 @@
-# 🌟 **What is CPU Scheduling?**
+# **What is CPU Scheduling?**
 - When multiple programs (or tasks) want to use the CPU, the operating system needs to decide which one gets to run first. This decision-making is called CPU Scheduling.
 
 - Think of it like a queue at a doctor's clinic — the receptionist (OS) decides who goes in next. That’s where CPU scheduling algorithms come in.
@@ -40,7 +40,7 @@
 
 - Lower number = higher priority (commonly used).
 
-## ** Summary TABLE
+## **Summary TABLE**
 
 | Term            | Meaning                               | Formula / Note                    |
 | --------------- | ------------------------------------- | --------------------------------- |
