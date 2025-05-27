@@ -53,6 +53,7 @@ Here are the main states in the process life cycle:
 - The process is currently using the CPU and executing instructions.
 
 - Only one process can be in this state at a time on a single-core CPU.
+- Short term sheduler bring the process from ready queue to running state.
 
 ## **4. Waiting (or Blocked)**
 - The process is waiting for some event like:
