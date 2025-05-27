@@ -36,12 +36,13 @@
 
 - The new page is loaded in.
 
-  | Term                 | Meaning                                                                           
+| Term                 | Meaning                                                                           |
 | -------------------- | --------------------------------------------------------------------------------- |
 | **Page**             | A fixed-size block of memory/data used in virtual memory.                         |
 | **Frame**            | A slot in physical memory (RAM) where a page can be loaded.                       |
 | **Page Fault**       | Happens when a page is not in memory and must be loaded from disk.                |
 | **Page Replacement** | Choosing which page to remove when RAM is full and a new page needs to be loaded. |
+
 
 ---
 
