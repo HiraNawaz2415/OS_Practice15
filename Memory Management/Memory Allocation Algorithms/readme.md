@@ -32,4 +32,18 @@ When a process needs memory, the OS finds a suitable free block (hole) from the 
 **Cons:**
  - May skip small suitable holes before the current pointer.
 
-## ** First Fit**
+## **First Fit**
+**How it Works**
+- 1. Memory Blocks: The algorithm divides memory into blocks of varying sizes.
+- 2. Process Request: When a process requests memory, the algorithm searches for the first block that's large enough to satisfy the request.
+- 3. Allocation: The first block that meets the size requirement is allocated to the process.
+
+**Advantages**
+1. Simple to Implement: The FF algorithm is straightforward and easy to understand.
+2. Fast Allocation: It quickly finds a suitable block, making it efficient for memory allocation.
+
+**Disadvantages**
+1. Fragmentation: The algorithm can lead to fragmentation, where free memory is broken into small, unusable blocks.
+2. Inefficient Use: It may not always allocate memory optimally, leading to wasted space.
+
+
