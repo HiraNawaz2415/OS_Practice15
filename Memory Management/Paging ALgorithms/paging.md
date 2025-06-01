@@ -82,6 +82,10 @@ Physical Address = f * frame size + d
 - Frame size = 256 bytes
 
 - Page number = 1023 / 256 = 3
+- Offset = 1023 % 256 = 255
+
+- If Page 3 is mapped to Frame 5, then:
+ - Physical Address=5×256+255=1535
 
 ---
 ## **Advantages of Paging**
@@ -104,8 +108,4 @@ Physical Address = f * frame size + d
 
 ---
 
-- Offset = 1023 % 256 = 255
-
-- If Page 3 is mapped to Frame 5, then:
- - Physical Address=5×256+255=1535
 
