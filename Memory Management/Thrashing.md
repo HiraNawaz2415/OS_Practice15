@@ -7,6 +7,7 @@
 Imagine your system is running 6 programs, but the RAM only has enough space for 3 at a time. 
 If each program keeps requesting pages that aren't in memory, the OS has to constantly swap pages in and out from disk — 
 and the CPU is "thrashing" (wasting time on memory management instead of actual work).
+
 ---
 ## **Why Thrashing Happens**
 
@@ -37,6 +38,7 @@ Process A needs Page 3 → Page Fault again → Swap back Page 1
 
 CPU is busy swapping pages, not executing!
 → This is Thrashing.
+
 ---
 ## **How to Detect Thrashing**
 - Monitor the page fault frequency.
