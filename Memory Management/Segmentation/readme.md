@@ -69,38 +69,8 @@ Translation:
 |  Slower access          | Extra address translation step needed |
 
 ---
-## **Diagram**
-                 ┌─────────────────────────────┐
- Logical Memory  │    Segment 0: Code          │ ─┐
- (Process View)  ├─────────────────────────────┤  │
-                 │    Segment 1: Data          │  │  Logical Address: <Segment No, Offset>
-                 ├─────────────────────────────┤  │
-                 │    Segment 2: Stack         │  │
-                 └─────────────────────────────┘  │
-                                                  ▼
-                                         Segment Table (Per Process)
-                             ┌────────────┬──────────────┬───────────┐
-                             │ Segment No │   Base Addr  │   Limit   │
-                             ├────────────┼──────────────┼───────────┤
-                             │     0      │     1000     │    600    │
-                             │     1      │     2000     │    400    │
-                             │     2      │     3000     │    300    │
-                             └────────────┴──────────────┴───────────┘
-                                                  │
-                                                  ▼
-                                   Address Translation Unit
-                                (Physical Addr = Base + Offset)
-                                                  │
-                                                  ▼
-                              ┌─────────────────────────────────────┐
- Physical Memory              │     Seg 0 → Addr 1000 - 1599        │
- (RAM View)                   ├─────────────────────────────────────┤
-                             │     Seg 1 → Addr 2000 - 2399        │
-                             ├─────────────────────────────────────┤
-                             │     Seg 2 → Addr 3000 - 3299        │
-                             └─────────────────────────────────────┘
 
----
+                
 ## **Segmentation VS Paging
 
 | Feature        | Segmentation                | Paging                       |
