@@ -30,4 +30,49 @@ If process needs 2MB → 2MB wasted
 
 
   ---
-  
+## **3. Paging (Non-Contiguous Allocation)**
+- Memory is divided into fixed-size pages (logical) and frames (physical).
+
+- Pages of processes are loaded into any free frame.
+
+- Solves both internal and external fragmentation issues.
+- Advantage: Easy to manage, supports virtual memory.
+
+- Disadvantage: Overhead due to maintaining page tables.
+
+  ---
+## **4. Segmentation**
+- Divides memory logically based on functions (code, data, stack).
+
+- Each segment has a different length and is stored in non-contiguous memory.
+- Advantage: Better logical structure.
+
+- Disadvantage: Can suffer from external fragmentation.
+
+---
+## **5. Segmentation with Paging**
+- Combines segmentation and paging to use the advantages of both.
+
+- Each segment is divided into pages, which are then mapped to memory.
+
+- Used in modern OS like Windows and Linux.
+
+---
+## **6. Virtual Memory**
+- Allows execution of processes that don’t fit entirely in RAM.
+
+- Uses disk space (swap) as temporary RAM.
+
+- Implemented using Demand Paging.
+
+---
+## Key Concept to rememeber
+
+| Term                       | Description                                   |
+| -------------------------- | --------------------------------------------- |
+| **Internal Fragmentation** | Wasted space inside allocated memory block.   |
+| **External Fragmentation** | Wasted space between allocated memory blocks. |
+| **Compaction**             | Rearranging memory to remove fragmentation.   |
+| **Swapping**               | Moving entire processes in/out of RAM.        |
+
+---
