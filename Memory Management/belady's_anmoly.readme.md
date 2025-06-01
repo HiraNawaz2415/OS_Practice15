@@ -7,6 +7,7 @@ In simple terms: More memory ≠ Better performance (under certain conditions).
 - Normally, we expect that giving a process more frames (i.e., more memory space) should reduce page faults, because there is more room to store needed pages.
 
 - But with Belady’s Anomaly, some algorithms behave oppositely: they cause more page faults as memory increases.
+  
   ---
 ## **Occurs In:**
 - FIFO (First-In-First-Out) page replacement algorithm.
