@@ -64,6 +64,7 @@ Which is unpredictable and dangerous.
 
 ## **Critical Section Problem**
 A critical section is a part of the program where the process accesses shared resources. Only one process should be allowed in its critical section at a time.
+If multiple processes enter their critical sections at the same time, it may cause data corruption or unexpected behavior.
 
 - A solution to the critical section problem must satisfy:
 
@@ -106,7 +107,141 @@ A critical section is a part of the program where the process accesses shared re
    - Used with monitors for signaling between processes when a condition becomes true.
 
 ---
+## **Main Critical Section Problems**
+
+## **1. 🥫 Producer-Consumer Problem**
+**Problem:**
+- Producer adds data to a buffer.
+
+- Consumer removes data from the buffer.
+
+- The buffer has limited size.
+**Real-Life Example:**
+- Imagine a chef (producer) making food and putting it on a table (buffer). A waiter (consumer) picks up the food and serves it.
+- The table can only hold a limited number of plates.
+**Issues:**
+- Producer must wait if the buffer is full.
+
+- Consumer must wait if the buffer is empty.
 
 
+**Solution:**
+
+- Use:
+
+     - Semaphore empty = number of empty slots
+     - Semaphore full = number of filled slots
+     - Mutex to protect buffer access
+
+**Synchronization Flow:**
+
+- Producer: wait(empty) → wait(mutex) → add item → signal(mutex) → signal(full)
+- Consumer: wait(full)  → wait(mutex) → remove item → signal(mutex) → signal(empty)
+
+  ---
+  
+## **2. 📖 Reader-Writer Problem**
+**Problem:**
+ - Multiple readers can read at the same time.
+ - Only one writer can write.
+ - No reader or writer should access the file during writing.
+
+**Issues:**
+- Writers need exclusive access.
+
+- Readers can be allowed together, only if no writer is writing.
+
+**Real-Life Example:**
+- A library where many people can read a book together, but if someone wants to edit the book, they need exclusive access.
+
+**Solution:**
+- Use:
+    - A mutex for writer acces
+    - A readCount variable to track number of readers
+    - Semaphores to block or allow processes
+
+**Variants:**
+- First readers problem: Writers may starve.
+
+- First writers problem: Readers may starve.
+- Fair solution: Balanced reader-writer access.
 
 
+---
+## 3. 🍴 Dining Philosophers Problem
+
+### Problem:
+- 5 philosophers sit at a table with 5 forks.
+- Each needs **2 forks** to eat.
+- Forks are shared between neighbors.
+
+### Issues:
+- If all philosophers pick one fork → **Deadlock**
+- Some may eat more than others → **Starvation**
+
+### Solution:
+- Use **mutexes/semaphores** for fork access.
+- Allow only 4 philosophers to eat at a time.
+- Use a **waiter/arbitrator** to manage access.
+
+---
+
+## 4. Bounded Buffer Problem
+
+### Problem:
+Similar to Producer-Consumer, but emphasizes the **fixed buffer size**.
+
+### Solution:
+- Same as Producer-Consumer using:
+  - `Mutex`
+  - `Full` and `Empty` semaphores
+
+---
+
+## 5. 💈 Sleeping Barber Problem
+
+### Problem:
+- Barber sleeps if no customers.
+- If chairs are full, customers leave.
+- If not, customers wait and barber serves one by one.
+
+### Solution:
+Use:
+- `Semaphore customers`
+- `Semaphore barbers`
+- `Mutex` to access shared waiting chairs
+
+---
+
+## 6. 🚬 Cigarette Smoker Problem
+
+### Problem:
+- 3 smokers: one has paper, one has tobacco, one has matches.
+- An agent places two of the three items on the table.
+- The smoker with the third item makes and smokes a cigarette.
+
+### Solution:
+- Use semaphores to signal the correct smoker to proceed.
+
+---
+
+## Summary Table
+
+| Problem               | Scenario             | Main Issue                   | Solution Tools            |
+|-----------------------|-------------------- -|------------------------------|---------------------------|
+| Producer-Consumer     | Shared buffer        | Full/Empty buffer            | Semaphore, Mutex          |
+| Reader-Writer         | File access          | Writer needs exclusivity     | Semaphore, Counter        |
+| Dining Philosophers   | Shared forks         | Deadlock, starvation         | Mutex, Semaphore, Waiter  |
+| Bounded Buffer        | Fixed queue          | Buffer overflow/underflow    | Same as Producer-Consumer |
+| Sleeping Barber       | Barber shop          | Sleeping barber, wait logic  | Semaphore, Mutex          |
+| Cigarette Smoker      | Smoking logic        | Choosing correct smoker      | Semaphore                 |
+
+---
+
+## Purpose
+These problems demonstrate **how operating systems handle synchronization** to avoid:
+- Deadlocks
+- Race conditions
+- Starvation
+
+---
