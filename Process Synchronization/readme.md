@@ -227,14 +227,15 @@ Use:
 
 ## Summary Table
 
-| Problem               | Scenario             | Main Issue                   | Solution Tools            |
-|-----------------------|-------------------- -|------------------------------|---------------------------|
-| Producer-Consumer     | Shared buffer        | Full/Empty buffer            | Semaphore, Mutex          |
-| Reader-Writer         | File access          | Writer needs exclusivity     | Semaphore, Counter        |
-| Dining Philosophers   | Shared forks         | Deadlock, starvation         | Mutex, Semaphore, Waiter  |
-| Bounded Buffer        | Fixed queue          | Buffer overflow/underflow    | Same as Producer-Consumer |
-| Sleeping Barber       | Barber shop          | Sleeping barber, wait logic  | Semaphore, Mutex          |
-| Cigarette Smoker      | Smoking logic        | Choosing correct smoker      | Semaphore                 |
+| Problem             | Type            | Main Challenge          | Solution Tool            |
+| ------------------- | --------------- | ----------------------- | ------------------------ |
+| Producer-Consumer   | Data buffer     | Full/Empty buffer       | Semaphore, Mutex         |
+| Reader-Writer       | File Access     | Readers vs. writers     | Read count, Semaphore    |
+| Dining Philosophers | Forks/Table     | Deadlock, starvation    | Mutex, Semaphore, Waiter |
+| Bounded Buffer      | Shared buffer   | Fixed-size queue        | Semaphore, Mutex         |
+| Sleeping Barber     | Customer/Barber | Barber sleep & wake     | Semaphore, Mutex         |
+| Cigarette Smoker    | Agent/Smokers   | Matching 2 items with 1 | Semaphores and signaling |
+
 
 ---
 
